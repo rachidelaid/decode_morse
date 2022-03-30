@@ -47,7 +47,7 @@ def decode(message)
   words.each do |word|
     msg += "#{decode_word(word)} "
   end
-  print msg
+  msg.strip
 end
 
-decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
+print decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
