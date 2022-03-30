@@ -27,8 +27,16 @@ MORSE_MAP = {
   '--..' => 'Z'
 }.freeze
 
-def decode_char(code)
-  return MORSE_MAP[code]
+def decode_char(character)
+  MORSE_MAP[character]
 end
 
-puts decode_char(".-")
+def decode_word(word)
+  msg_word = ''
+  characters = word.split
+  characters.each do |character|
+    msg_word += decode_char(character)
+  end
+  msg_word
+end
+decode_word('-- -.--')
