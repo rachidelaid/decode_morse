@@ -27,3 +27,8 @@ MORSE_MAP = {
   '--..' => 'Z'
 }.freeze
 
+def decode_char(code)
+  return MORSE_MAP[code]
+end
+
+puts decode_char(".-")
